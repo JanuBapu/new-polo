@@ -42,9 +42,9 @@ bot = Client(
     bot_token=BOT_TOKEN
 )
 
-API_ID    = os.environ.get("API_ID", "21705536")
-API_HASH  = os.environ.get("API_HASH", "c5bb241f6e3ecf33fe68a444e288de2d")
-BOT_TOKEN = os.environ.get("BOT_TOKEN", "8020618163:AAEQTBjtfNsB7cMtx053fYFwJwIVfSjNVRk") 
+API_ID    = os.environ.get("API_ID", "22594398")
+API_HASH  = os.environ.get("API_HASH", "3a2408d97d6a222d87766dac2da302df")
+BOT_TOKEN = os.environ.get("BOT_TOKEN", "7429048456:AAEH21RqF9AuwkjFl7FcnpGtJd4B2_uTsHk") 
 
 # Define aiohttp routes
 routes = web.RouteTableDef()
@@ -160,7 +160,7 @@ async def start_command(bot: Client, message: Message):
 
 
 COOKIES_FILE_PATH = os.getenv("COOKIES_FILE_PATH", "youtube_cookies.txt")
-ADMIN_ID = 1147534909 # Admin ID
+ADMIN_ID = 5357048091 # Admin ID
 
 @bot.on_message(filters.command("cookies") & filters.private)
 async def cookies_handler(client: Client, m: Message):
@@ -201,7 +201,7 @@ SUBSCRIPTION_FILE = "subscription_data.txt"
 CHANNELS_FILE = "channels_data.json"
 
 # Admin ID
-YOUR_ADMIN_ID = 1147534909
+YOUR_ADMIN_ID = 5357048091
 
 # Function to read subscription data
 def read_subscription_data():
@@ -284,7 +284,7 @@ async def remove_user(client, message: Message):
     except ValueError:
         await message.reply_text("Invalid command format. Use: /removeuser <user_id>")
 
-YOUR_ADMIN_ID = 1147534909
+YOUR_ADMIN_ID = 5357048091
 
 # Helper function to check admin privilege
 def is_admin(user_id):
@@ -396,7 +396,7 @@ async def id_command(client, message: Message):
             f"`/add_channel {chat_id}`"
         )
 
-YOUR_ADMIN_ID = 1147534909
+YOUR_ADMIN_ID = 5357048091
 
 # Helper function to check admin privilege
 def is_admin(user_id):
@@ -451,7 +451,7 @@ async def stop_handler(client, message: Message):
     
 cookies_file_path = os.getenv("COOKIES_FILE_PATH", "youtube_cookies.txt")
 
-@bot.on_message(filters.command("engineer"))
+@bot.on_message(filters.command("txt"))
 async def moni_handler(client: Client, m: Message):
     if m.chat.type == "private":
         user_id = str(m.from_user.id)
